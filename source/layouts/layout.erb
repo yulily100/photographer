@@ -9,11 +9,21 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
 
-    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= stylesheet_link_tag "style" %>
     <%= javascript_include_tag  "all" %>
   </head>
 
   <body class="<%= page_classes %>">
+    <header class="header-main">
+      <h1 class="main-logo"><a href="/">Yosuke Ohtake</a></h1>
+      <nav class="global-nav">
+        <ul>
+          <li><a href="#">PROFILE</a></li>
+          <li><a href="#">PHOTOGRAPHY</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>

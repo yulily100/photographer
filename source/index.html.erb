@@ -3,7 +3,30 @@ title: Welcome to Middleman
 ---
 
 <div class="welcome">
-  <h1>Middleman is Watching</h1>
+
+<img id="img1" src="" alt="" />
+
+<script type="text/javascript">
+//読み込み時の表示
+window_load();
+
+//ウィンドウサイズ変更時に更新
+window.onresize = window_load;
+
+//サイズの表示
+function window_load() {
+	var sW,sH;
+	sW = window.innerWidth;
+	sH = window.innerHeight;
+
+  document.getElementById("img1").style.width = sW - 15 + "px";
+  document.getElementById("img1").style.height = sH + "px";
+
+}
+
+</script>
+
+
   <p class="doc">
     <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
   </p><!-- .doc -->

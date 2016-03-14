@@ -1,0 +1,42 @@
+// Core (Main Style)
+
+// navigation
+
+.header-main {
+  overflow: hidden;
+  padding: 20px 0;
+}
+.main-logo {
+  float: left;
+  margin: 0 0 0 30px;
+}
+.global-nav {
+  float: right;
+  margin: 0 30px 0 0;
+  ul {
+    overflow: hidden;
+  }
+  li {
+    float: left;
+    margin: 0 15px;
+    font-family: $rambla;
+    font-size: 110%;
+    letter-spacing: .06em;
+  }
+}
+
+
+.global-nav-list {
+  padding: 10px 0;
+  @include clearfix;
+  li {
+    float: left;
+  }
+}
+
+// top page
+.toppage-panel {
+  background: $primary;
+  padding: 10px;
+  color: #fff;
+}
