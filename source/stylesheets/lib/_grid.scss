@@ -3,12 +3,12 @@ body {
 }
 // grid
 .l-container {
-    width: 940px;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    @media #{$mq-lg} {
-        width: 1170px;
-    }
+    //@media #{$mq-lg} {
+    //    width: 1170px;
+    //}
     @media #{$mq-md} {
         width: 720px;
     }
@@ -19,8 +19,8 @@ body {
     }
 }
 .l-row {
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: -25px;
+    margin-right: -25px;
     @include clearfix();
     @media #{$mq-sm} {
         margin-left: -10px;

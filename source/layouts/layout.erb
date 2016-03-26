@@ -7,7 +7,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Middleman" %></title>
+    <title><%= current_page.data.title || "YOSUKE OHTAKE" %></title>
 
     <%= stylesheet_link_tag "style" %>
     <%= javascript_include_tag  "all" %>
@@ -18,12 +18,26 @@
       <h1 class="main-logo"><a href="/">Yosuke Ohtake</a></h1>
       <nav class="global-nav">
         <ul>
+          <li><a href="photography.html">PHOTOGRAPHY</a></li>
           <li><a href="#">PROFILE</a></li>
-          <li><a href="#">PHOTOGRAPHY</a></li>
           <li><a href="#">CONTACT</a></li>
         </ul>
       </nav>
     </header>
     <%= yield %>
+    <footer class="footer-main">
+      <div class="footer-inner">
+        <h3 class="footer-title">YOSUKE OTAKE</h3>
+        <p class="footer-descreption">freelance photographer</p>
+        <ul class="footer-sns">
+          <li><a href="https://www.facebook.com/yotk39/" target="_blank">facebook</a></li>
+          <li><a href="https://www.instagram.com/yosukeohtake_archiphoto/" target="_blank"  >instagram</a></li>
+        </ul>
+        <p class="read-more-small"><a href="#">PROFILE</a></p>
+      </div>
+      <div class="copyright">
+        <p>Copyright ©YOSUKE OHTAKE All Rights Reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>

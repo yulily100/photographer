@@ -23,13 +23,27 @@ ul, li {
 }
 // mixin
 @mixin clearfix() {
-    *zoom: 1;
-    &:before,
-    &:after {
-        display: table;
-        content: " ";
-    }
-    &:after {
-        clear: both;
-    }
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+}
+@mixin f-left {
+  float: left;
+  @media #{$mq-md} {
+    float: none;
+    width: 100%;
+  }
+}
+@mixin f-right {
+  float: right;
+  @media #{$mq-md} {
+    float: none;
+    width: 100%;
+  }
 }

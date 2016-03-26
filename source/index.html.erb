@@ -1,10 +1,24 @@
 ---
-title: Welcome to Middleman
+title: YOSUKE OHTAKE
 ---
 
-<div class="welcome">
+<div id="main-image"></div>
+<div class="l-container">
+  <div class="toppage-inner">
+    <h2 class="primary-title">WORKS</h2>
+    <div class="l-row">
+      <ul class="toppage-list">
+        <% data.images.friends.each do |f| %>
+        <li>
+          <img src="/images/<%= f %>" alt=""></li>
+        <% end %>
+      </ul>
+      <p class="read-more"><a href="#">MORE PHOTOS</a></p>
+    </div>
+  </div>
+</div>
 
-<img id="img1" src="" alt="" />
+
 
 <script type="text/javascript">
 //読み込み時の表示
@@ -18,16 +32,7 @@ function window_load() {
 	var sW,sH;
 	sW = window.innerWidth;
 	sH = window.innerHeight;
-
-  document.getElementById("img1").style.width = sW - 15 + "px";
-  document.getElementById("img1").style.height = sH + "px";
-
+  document.getElementById("main-image").style.width = sW - 15 + "px";
+  document.getElementById("main-image").style.height = sH + "px";
 }
-
 </script>
-
-
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
