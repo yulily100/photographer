@@ -3,29 +3,20 @@
 
 // common
 .read-more {
-  font-family: $rambla;
-  font-weight: bold;
   text-align: center;
-  font-size: 150%;
-  letter-spacing: .08em;
   a {
-    display: inline-block;
-    background: url("/images/read-more.png") right center no-repeat;
-    background-size: 8px 11px;
-    padding-right: 20px;
+    @include btn;
+    @include hover-efect;
   }
 }
 .read-more-small {
-  font-family: $rambla;
-  font-weight: bold;
   text-align: center;
-  font-size: 120%;
-  letter-spacing: .08em;
   a {
-    display: inline-block;
-    background: url("/images/read-more.png") right center no-repeat;
+    @include btn;
+    @include hover-efect;
     background-size: 6px 10px;
     padding-right: 15px;
+    font-size: 120%;
   }
 }
 
@@ -33,7 +24,7 @@
 
 .header-main {
   overflow: hidden;
-  padding: 20px 0;
+  padding: 30px 0;
   position: absolute;
   width: 100%;
 }
@@ -45,7 +36,7 @@
   float: right;
   margin: 0 30px 0 0;
   ul {
-    overflow: hidden;
+    @include clearfix();
   }
   li {
     float: left;
@@ -53,6 +44,9 @@
     font-family: $rambla;
     font-size: 110%;
     letter-spacing: .06em;
+  }
+  a {
+    @include hover-efect(-3px);
   }
 }
 
@@ -101,6 +95,16 @@
   background: url("/images/border.png") center top no-repeat;
   background-size: 12px 2px;
   padding: 20px 0 0 0;
+  display: inline-block;
+  @include clearfix;
+  li {
+    float: left;
+    margin: 0 10px;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+  }
 }
 .copyright {
   background: darken($footer, 5%);
@@ -143,6 +147,7 @@
 }
 .subpage-main {
   width: 770px;
+  margin: 0 0 80px 0;
   @include f-right();
   img {
     width: 100%;
@@ -186,6 +191,7 @@
 }
 .sentence-english {
   width: 360px;
+  letter-spacing: .06em;
   @include f-right();
 }
 .profile-title {
@@ -195,14 +201,48 @@
 .profile-position {
   font-size: 80%;
   letter-spacing: .06em;
-  margin: 5px 0 15px;
+  margin: 5px 0 20px;
 }
 .subpage-sentence {
-  padding: 0 0 80px 0;
+  margin: 0 0 60px 0;
+  font-family: $rambla;
   @include clearfix();
 }
 .subpage-description {
   font-size: 90%;
   line-height: 20px;
   margin: 0;
+}
+
+// contact
+.contact-title {
+  letter-spacing: .08em;
+  background: url("/images/border.png") left bottom no-repeat;
+  background-size: 12px 2px;
+  padding: 0 0 10px 0;
+  margin: 0 0 15px 0;
+  font-weight: normal;
+  font-size: 100%;
+}
+.contact-form {
+  font-family: $rambla;
+  input, textarea {
+    border: 2px solid $text;
+    padding: 8px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 110%;
+    margin: 0 0 35px 0;
+    letter-spacing: .08em;
+  }
+  .input-btn {
+    @include hover-efect;
+    input {
+      border: none;
+      width: auto;
+      background: #fff;
+      margin: 0;
+      @include btn;
+    }
+  }
 }
