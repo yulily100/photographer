@@ -178,3 +178,31 @@
     color: $text-light;
   }
 }
+
+// profile, contact
+.sentence-japanese {
+  width: 360px;
+  @include f-left();
+}
+.sentence-english {
+  width: 360px;
+  @include f-right();
+}
+.profile-title {
+  margin: 0;
+  letter-spacing: .08em;
+}
+.profile-position {
+  font-size: 80%;
+  letter-spacing: .06em;
+  margin: 5px 0 15px;
+}
+.subpage-sentence {
+  padding: 0 0 80px 0;
+  @include clearfix();
+}
+.subpage-description {
+  font-size: 90%;
+  line-height: 20px;
+  margin: 0;
+}
