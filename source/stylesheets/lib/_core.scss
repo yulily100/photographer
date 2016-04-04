@@ -28,11 +28,21 @@
   position: absolute;
   width: 100%;
 }
+.header-inner {
+  position: relative;
+  @media #{$mq-sm} {
+    margin: 0 10px;
+    padding: 10px 0;
+  }
+}
 .main-logo {
   float: left;
   margin: 0 0 0 30px;
+  @media #{$mq-sm} {
+    margin: 0;
+  }
 }
-.global-nav {
+#global-nav {
   float: right;
   margin: 0 30px 0 0;
   ul {
@@ -48,19 +58,38 @@
   a {
     @include hover-efect(-3px);
   }
+  @media #{$mq-sm} {
+    display: none;
+    float: none;
+    width: 100%;
+    margin: 50px 0 0;
+    li {
+      float: none;
+      display: block;
+      margin: 30px 0;
+      text-align: center;
+    }
+  }
 }
+#global-nav.is-open {
+  display: block;
+}
+#toggle-btn {
+  font-size: 200%;
+  font-weight: bold;
+  display: none;
+  position: absolute;
+  right: 10px;
+  margin: 0;
+  @media #{$mq-sm} {
+    display: inline-block;
+  }
+}
+
 
 #main-image {
   background: url(/images/main-image.jpg) center center;
   background-size: cover;
-}
-
-.global-nav-list {
-  padding: 10px 0;
-  @include clearfix;
-  li {
-    float: left;
-  }
 }
 .primary-title {
   text-align: center;
@@ -188,6 +217,9 @@
 .sentence-japanese {
   width: 360px;
   @include f-left();
+  @media #{$mq-md} {
+    margin: 0 0 40px 0;
+  }
 }
 .sentence-english {
   width: 360px;

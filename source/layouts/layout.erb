@@ -5,6 +5,7 @@
 
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width">
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "YOSUKE OHTAKE" %></title>
@@ -15,14 +16,17 @@
 
   <body class="<%= page_classes %>">
     <header class="header-main">
-      <h1 class="main-logo"><a href="/">Yosuke Ohtake</a></h1>
-      <nav class="global-nav">
-        <ul>
-          <li><a href="photography.html">PHOTOGRAPHY</a></li>
-          <li><a href="profile.html">PROFILE</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-      </nav>
+      <div class="header-inner">
+        <h1 class="main-logo"><a href="/">Yosuke Ohtake</a></h1>
+        <span id="toggle-btn">三</span>
+        <nav id="global-nav">
+          <ul>
+            <li><a href="photography.html">PHOTOGRAPHY</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <%= yield %>
     <footer class="footer-main">
@@ -40,4 +44,13 @@
       </div>
     </footer>
   </body>
+  <script type="text/javascript">
+  var toggleBtn = document.getElementById("toggle-btn");
+  var globalNav = document.getElementById("global-nav");
+  toggleBtn.addEventListener('click', function() {
+    globalNav.classList.toggle('is-open');
+  });
+
+
+  </script>
 </html>
